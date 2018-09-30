@@ -7,17 +7,17 @@ REM Export de uma featureClass, lista de featureClass's ou featureDataset (separ
 REM seguem exemplos, basta retirar o 'rem' para a linha funcionar:
 
 REM  exporta tudo
-REM CALL "C:\cpc_apps\gdb2shp\gdb2shp.pyc" "D:\temp\250_top.gdb" "D:\temp\250_shp"
+CALL "C:\cpc_apps\gdb2shp\gdb2shp.pyc" "D:\temp\test.gdb" "D:\temp\test_shp"
 
-REM  exporta apenas a FC: A_Albufeira
-CALL PYTHON "C:\cpc_apps\gdb2shp\gdb2shp.pyc" "D:\temp\250_top.gdb" "D:\temp\250_shp" "L_Ponte_larga_de_betao_em_via"
+REM  exporta apenas a FC: L_Ponte
+CALL PYTHON "C:\cpc_apps\gdb2shp\gdb2shp.pyc" "D:\temp\test.gdb" "D:\temp\test_shp" "L_Ponte"
 
-REM  exporta todas as FC's da FDS toponimia
-CALL "C:\cpc_apps\gdb2shp\gdb2shp.pyc" "D:\temp\250_top.gdb" "D:\temp\250_shp" "toponimia"
+REM  exporta todas as FC's da FDS topo
+CALL "C:\cpc_apps\gdb2shp\gdb2shp.pyc" "D:\temp\test.gdb" "D:\temp\test_shp" "topo"
 
-REM  exporta todas as FC's da FDS WGS84_Mil e a FC tpn_Export (pre-validacao)
-CALL "C:\cpc_apps\gdb2shp\gdb2shp.pyc" "D:\temp\250_top.gdb" "D:\temp\250_shp" "WGS84_Mil,tpn_Export"
+REM  exporta todas as FC's da FDS WGS84 e a FC tpnt (pre-validacao)
+CALL "C:\cpc_apps\gdb2shp\gdb2shp.pyc" "D:\temp\test.gdb" "D:\temp\test_shp" "WGS84,tpnt"
 
-REM  exporta as FC's A_Albufeira,A_Azenha e todas as FC's da FDS toponimia
-CALL "C:\cpc_apps\gdb2shp\gdb2shp.pyc" "D:\temp\250_top.gdb" "D:\temp\250_shp" "A_Albufeira,A_Azenha,toponimia"
+REM  exporta as FC's feature1,feature2 e todas as FC's da FDS featuredataset1
+CALL "C:\cpc_apps\gdb2shp\gdb2shp.pyc" "D:\temp\test.gdb" "D:\temp\test_shp" "feature1,feature2,featuredataset1"
 ```
